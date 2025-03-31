@@ -8,7 +8,7 @@ clean:
 	rm -r __pycache__
 
 test: test_app.py
-	env/bin/python -m pytest
+	pytest
 
 run: app.py
 	flask  run --host 10.92.21.104 --port 8008
