@@ -1,7 +1,6 @@
 setup:
 	python3 -m venv env
 	env/bin/pip install -r requirements.txt
-	echo Installed Dependencies
 
 clean:
 	rm -r env

@@ -17,12 +17,6 @@ def test_time(freezer, client):
 	data = time.strftime("%b %d, %Y, %H:%M")
 	assert response.data == data.encode()
 
-
-# Check that the IP address is not being messed with
-def test_ip(client):
-#	response = client.get('/')
-#	assert response.remote_addr == '10.92.21.104'
-	pass
 # Check for an apppropriate response code given after being passed a bad route
 def test_not_found(client):
 	response = client.get('/nothingtoseehere')
@@ -30,4 +24,16 @@ def test_not_found(client):
 
 # Check that the app is giving correct data after a couple calls.
 def test_multiple_calls(client, freezer):
-	pass
+	time1 = datetime.datetime.now()
+	response1 = client.get('/')
+	time1.strftime("%b %d, %Y, %H:%M")
+# assert that the response is expected, similar to test_time
+	assert response1.data == (time1.strftime("%b %d, %Y, %H:%M")).encode()
+# then we move time forward 5 minutes
+	freezer.tick(datetime.timedelta(minutes=5))
+	time2 = datetime.datetime.now()
+	# assert that the two times are not equal
+	assert time1 != time2
+	response2 = client.get('/')
+	# and finally assert that the two responses do not have the same data
+	assert response1.data != response2.data
