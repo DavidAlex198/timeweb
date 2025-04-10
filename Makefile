@@ -6,7 +6,7 @@ APPNAME = app
 setup:
 	python3 -m venv ${VENVNAME}
 	${VENVNAME}/bin/pip install -r requirements.txt
-	${VENVNAME}/bin/pip install distutils
+	${VENVNAME}/bin/pip install setuptools
 clean:
 	rm -r ${VENVNAME}
 	rm -r __pycache__
