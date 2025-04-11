@@ -5,9 +5,9 @@ To clone from docker, move to your desire directory and run:
     docker pull davidalex198/timeweb
 Prior to running, you need to enter your github credentials into a file called .credentials.
 Your credentials must be in the following format:
-    GITHUB_USER=username
-    GITHUB_EMAIL=email
-    GITHUB_TOKEN=personal_access_token
+    ##GITHUB_USER=username
+    ##GITHUB_EMAIL=email
+    ##GITHUB_TOKEN=personal_access_token
 
 After both davidalex198/timeweb has been pulled and your credentials entered, copy the following command to use the container:
     docker run -p <HOSTIP>:<PORT>:5000 --env-file .credentials -it davidalex198/timeweb
