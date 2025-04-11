@@ -2,7 +2,7 @@
 
 - This application can be cloned from here, or cloned from DockerHub
 
-- To clone from docker, move to your desire directory and run:
+- To clone from DockerHub, move to your desire directory and run:
 ```bash
 docker pull davidalex198/timeweb
 ```
