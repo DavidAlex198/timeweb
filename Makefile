@@ -1,5 +1,5 @@
-FLASKIP = --host 10.92.21.104
-FLASKPORT = --port 8008
+FLASKIP = --host 0.0.0.0
+FLASKPORT = --port 5000
 TESTAPP = _app
 VENVNAME = env
 APPNAME = app
