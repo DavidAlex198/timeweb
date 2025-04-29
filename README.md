@@ -22,3 +22,4 @@ Where HOSTIP is the IP of your machine and PORT is whatever port you want the ap
 - The container will start, clone the repository, and you will automatically enter the container. You are still responsible for changing into the timweb directory, running 'make setup', and sourcing your virtual environment. 
 
 - To run the applicaiton, type 'make run' or 'python app.py'. In your web browser, enter HOSTIP:PORT and you will be able to view it. 
+
